@@ -35,13 +35,6 @@
     z-index: 2;
   }
   
-  .slider__left-value,
-  .slider__right-value {
-    color: #dee2e6;
-    font-size: 12px;
-    margin-top: 20px;
-  }
-  
   .slider-inputs{
     width: 100%;
     display: flex;
@@ -51,10 +44,9 @@
   
   
   .slider__right-value, .slider__left-value {
-    width: 54px;
+    width: 35px;
     height: 23px;
     border-radius: 5px;
-    background: #6a6a6a;
     text-align: center;
     color: white;
     font-size: 12px;
@@ -120,3 +112,20 @@
     pointer-events: all;
     position: relative;
   }
+
+.input-box {
+  background: #6a6a6a;
+  height: 23px;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  width: 54px;
+  border-radius: 5px;
+}
+
+.ruble {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  line-height: normal;
+  color: #fff;
+}
