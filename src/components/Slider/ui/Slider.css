@@ -118,6 +118,8 @@
   height: 23px;
   display: flex;
   align-items: center;
+  justify-content: center;
+  padding: 4px 10px;
   margin-top: 20px;
   width: 54px;
   border-radius: 5px;
