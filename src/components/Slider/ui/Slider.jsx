@@ -113,20 +113,27 @@ export const Slider = ({ min, max }) => {
 
       <div className="slider">
         <div className="slider-inputs">
-          <input
+          <div className="input-box">
+            <input
             type="text"
             value={minValue}
             className="slider__left-value"
             onChange={onChangeTextMin}
             onBlur={onBlurMin}
           />
-          <input
+            <span className="ruble">&#8381;</span>
+          </div>
+          <div className="input-box">
+            <input
             type="text"
             value={maxValue}
             className="slider__right-value"
             onChange={onChangeTextMax}
             onBlur={onBlurMax}
           />
+            <span className="ruble">&#8381;</span>
+          </div>
+          
         </div>
         <div className="slider__track" />
         <div ref={range} className="slider__range" />
