@@ -8,6 +8,7 @@ export const Slider = ({ min, max }) => {
   const minValueRef = useRef(null);
   const maxValueRef = useRef(null);
   const range = useRef(null);
+  
 
   const getPercent = useCallback(
     (value) => Math.round(((value - min) / (max - min)) * 100),
@@ -15,8 +16,8 @@ export const Slider = ({ min, max }) => {
   );
 
   useEffect(() => {
-    if (maxValueRef.current) {
-      const minPercent = getPercent(minValueRef);
+    if (maxValueRef.current  ) {
+      const minPercent = getPercent(minValue);
       const maxPercent = getPercent(+maxValueRef.current.value);
 
       if (range.current) {
@@ -39,7 +40,7 @@ export const Slider = ({ min, max }) => {
 
   const onChangeMinValue = useCallback(
     (e) => {
-      const value = Math.min(+e.target.value, maxValue - 1);
+      const value = Math.min(+e.target.value, maxValue - 200);
       setMinValue(value);
       e.target.value = value.toString();
     },
@@ -48,9 +49,9 @@ export const Slider = ({ min, max }) => {
 
   const onChangeMaxValue = useCallback(
     (e) => {
-      const value = Math.max(+e.target.value, minValue + 1);
-      setMaxValue(value);
-      e.target.value = value.toString();
+        const value = Math.max(+e.target.value, minValue + 200);
+        setMaxValue(value);
+        e.target.value = value.toString();
     },
     [minValue]
   );
